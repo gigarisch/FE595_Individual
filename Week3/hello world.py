@@ -14,6 +14,9 @@ def hello_world():
     print("What should I print?")
     return "Hello, world!"
 
+@app.route("/hello/<name>", methods=["GET"])
+def hello_person(name):
+    return "Hello, {}!".format(name)
 
 
 if __name__ == "__main__":
